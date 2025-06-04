@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@rosecreek/about-us": ["libs/pages/about-us/src/index.ts"],
+      "@rosecreek/dogs": ["libs/pages/dogs/src/index.ts"],
+      "@rosecreek/inquiries": ["libs/pages/inquiries/src/index.ts"],
+      "@rosecreek/litters": ["libs/pages/litters/src/index.ts"],
+      "@rosecreek/ui": ["libs/shared/ui/src/index.ts"],
+      "@rosecreek/updates": ["libs/pages/updates/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

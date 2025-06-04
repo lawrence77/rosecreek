@@ -1,0 +1,51 @@
+.header {
+  background-color: #f8f8f8;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #007bff;
+}
+
+.nav-links button {
+  background-color: #dc3545; /* Red for logout */
+  padding: 5px 10px;
+  font-size: 0.9em;
+  margin: 0;
+}
