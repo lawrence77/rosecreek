@@ -1,5 +1,5 @@
 .header {
-  background-color: #f8f8f8;
+  background-color: #ffb0a0;
   padding: 15px 0;
   border-bottom: 1px solid #eee;
 }
@@ -33,14 +33,14 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #555;
+  color: #393939;
   font-weight: bold;
   padding: 5px 0;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #007bff;
+  color: #9d1111;
 }
 
 .nav-links button {

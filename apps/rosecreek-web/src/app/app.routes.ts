@@ -3,7 +3,8 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: '',
-    loadComponent: () => import('@rosecreek/ui').then((m) => m.HeaderComponent),
+    redirectTo: '/dogs',
+    pathMatch: 'full',
   },
   {
     path: 'dogs',

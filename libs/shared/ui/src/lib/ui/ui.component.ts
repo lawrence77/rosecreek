@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component /*, OnInit*/ } from '@angular/core';
+import { RouterModule } from '@angular/router';
 // import { AuthService } from '../../auth/auth.service';
 // import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-header',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './ui.component.html',
   styleUrls: ['./ui.component.css'],
 })
