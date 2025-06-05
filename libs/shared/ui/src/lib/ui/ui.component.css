@@ -41,6 +41,7 @@
 .nav-links a:hover,
 .nav-links a.active {
   color: #9d1111;
+  border-bottom: 2px solid #9d1111; /* Underline on hover or active */
 }
 
 .nav-links button {
