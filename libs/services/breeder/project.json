@@ -1,0 +1,27 @@
+{
+  "name": "breeder-service",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/services/breeder/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/services/breeder",
+        "tsConfig": "libs/services/breeder/tsconfig.lib.json",
+        "packageJson": "libs/services/breeder/package.json",
+        "main": "libs/services/breeder/src/index.ts",
+        "assets": ["libs/services/breeder/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/services/breeder/jest.config.ts"
+      }
+    }
+  }
+}

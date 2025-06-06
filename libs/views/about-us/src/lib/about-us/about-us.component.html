@@ -1,2 +1,54 @@
 <lib-header></lib-header>
-<p>AboutUs works!</p>
+<div *ngIf="aboutUs !== undefined" class="page-section">
+  <h1>About {{ aboutUs.name }}</h1>
+
+  <section class="about-section">
+
+    <h2>Our Family & Mission</h2>
+    <p>
+      {{ aboutUs.description }}
+    </p>
+    <p *ngIf="aboutUs.mission !== undefined">
+      <strong>Mission:</strong> {{ aboutUs.mission }}
+    </p>
+    <p *ngIf="aboutUs.history !== undefined">
+      <strong>History:</strong> {{ aboutUs.history }}
+    </p>
+
+    <div class="team-members">
+      <div *ngFor="let member of aboutUs.staff" class="member-card">
+        <!-- <img [src]="member.photo" alt="{{ member.name }}" class="member-photo"> -->
+        <h3>{{ member.name }}</h3>
+        <p class="role">{{ member.role }}</p>
+        <p>{{ member.bio }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Our Valued Team & Partners</h2>
+    <h3>Dog Handlers</h3>
+    <div class="team-members">
+      <div *ngFor="let handler of aboutUs.handlers" class="member-card">
+        <!-- <img [src]="handler.photo" alt="{{ handler.name }}" class="member-photo"> -->
+        <h3>{{ handler.name }}</h3>
+        <p class="role">{{ handler.role }}</p>
+        <p>{{ handler.bio }}</p>
+      </div>
+      <div *ngFor="let support of aboutUs.support" class="member-card">
+        <!-- <img [src]="support.photo" alt="{{ support.name }}" class="member-photo"> -->
+        <h3>{{ support.name }}</h3>
+        <p>{{ support.bio }}</p>
+      </div>
+    </div>
+
+    <h3>Sponsors</h3>
+    <div class="sponsors-list">
+      <div *ngFor="let sponsor of aboutUs.sponsors" class="sponsor-card">
+        <!-- <img [src]="sponsor.logo" alt="{{ sponsor.name }}" class="sponsor-logo"> -->
+        <h4>{{ sponsor.name }}</h4>
+        <p>{{ sponsor.bio }}</p>
+      </div>
+    </div>
+  </section>
+</div>

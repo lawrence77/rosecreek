@@ -1,1 +1,1 @@
-export * from './lib/litter-service/litter.service';
+export * from './lib/litter.service';

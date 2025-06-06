@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@rosecreek/about-us": ["libs/views/about-us/src/index.ts"],
+      "@rosecreek/breeder-model": ["libs/models/breeder/src/index.ts"],
+      "@rosecreek/breeder-service": ["libs/services/breeder/src/index.ts"],
       "@rosecreek/dog-model": ["libs/models/dog/src/index.ts"],
       "@rosecreek/dog-service": ["libs/services/dog/src/index.ts"],
       "@rosecreek/dogs": ["libs/views/dogs/src/index.ts"],

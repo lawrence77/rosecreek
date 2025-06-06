@@ -1,10 +1,10 @@
 export default {
-  displayName: 'dog-model',
+  displayName: 'breeder-service',
   preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/libs/models/dog',
+  coverageDirectory: '../../../coverage/libs/services/breeder',
 };

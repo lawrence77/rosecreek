@@ -11,6 +11,7 @@ export class LitterService {
   // private baseUrl = 'http://localhost:3000'; // Default NestJS port
   mockData = [
     {
+      id: 1,
       damId: 2,
       sireId: 3,
       birthDate: new Date(Date.UTC(2025, 0, 17, 12)),

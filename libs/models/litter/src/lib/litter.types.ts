@@ -1,4 +1,5 @@
 export type Litter = {
+  id: number;
   damId: number;
   sireId: number;
   birthDate: Date;

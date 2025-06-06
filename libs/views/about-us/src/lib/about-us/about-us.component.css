@@ -1,0 +1,71 @@
+.about-section {
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-section h2, .about-section h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.team-members, .sponsors-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.member-card, .sponsor-card {
+  text-align: center;
+  flex: 1 1 calc(33% - 40px); /* 3 items per row, with gap */
+  max-width: 280px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #f0f0f0;
+}
+
+.member-card .role {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.sponsor-logo {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sponsor-card h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .member-card, .sponsor-card {
+    flex: 1 1 calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .member-card, .sponsor-card {
+    flex: 1 1 100%; /* 1 item per row */
+  }
+}

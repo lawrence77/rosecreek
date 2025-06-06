@@ -1,1 +1,1 @@
-export * from './lib/dog-service/dog.service';
+export * from './lib/dog.service';
