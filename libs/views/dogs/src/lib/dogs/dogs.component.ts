@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Dog } from '@rosecreek/models/dog';
+import { Dog } from '@rosecreek/dog-model';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '@rosecreek/ui';
 import { DogService } from '@rosecreek/dog-service';

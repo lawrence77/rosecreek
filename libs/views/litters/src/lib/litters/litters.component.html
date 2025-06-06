@@ -1,2 +1,27 @@
 <lib-header></lib-header>
-<p>Litters works!</p>
+<div class="page-section">
+  <h1>Our Litters</h1>
+  <!-- <div *ngIf="isLoggedIn" class="admin-note">
+    <p>You are logged in as an admin. Navigate to the <a routerLink="/admin/litters">Admin Litters page</a> to manage entries.</p>
+  </div> -->
+  <div class="litter-list">
+    <div *ngFor="let litter of litters" class="litter-card">
+      <h2>{{ litter.damId }} -- {{ litter.sireId }} </h2>
+      > Note: Fetch the damId and sireId names from the database and display them here.
+      <div class="litter-photos">
+        <img *ngFor="let photo of litter.photos" [src]="photo" alt="TODO" class="litter-photo-thumbnail">
+      </div>
+      <p><strong>Dam ID:</strong> {{ litter.damId }}</p>
+      <p><strong>Sire ID:</strong> {{ litter.sireId }}</p>
+      <p><strong>Description:</strong> {{ litter.description }}</p>
+      <div class="litter-puppies">
+        <h3>Puppies:</h3>
+        <ul>
+          <li *ngFor="let puppy of litter.puppyIds">
+            <strong>{{ puppy }}</strong>
+          </li>
+        </ul>
+      </div>
+    <p *ngIf="litters.length === 0">No litters found. Please add some from the Admin panel!</p>
+  </div>
+</div>

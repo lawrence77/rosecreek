@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Dog } from '@rosecreek/models/dog'; // Adjust the import path as necessary
+import { Dog } from '@rosecreek/dog-model'; // Adjust the import path as necessary
 
 @Injectable({
   providedIn: 'root',
