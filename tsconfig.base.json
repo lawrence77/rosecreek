@@ -15,12 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rosecreek/about-us": ["libs/pages/about-us/src/index.ts"],
-      "@rosecreek/dogs": ["libs/pages/dogs/src/index.ts"],
-      "@rosecreek/inquiries": ["libs/pages/inquiries/src/index.ts"],
-      "@rosecreek/litters": ["libs/pages/litters/src/index.ts"],
+      "@rosecreek/about-us": ["libs/views/about-us/src/index.ts"],
+      "@rosecreek/models/dog": ["libs/models/dog/src/index.ts"],
+      "@rosecreek/dogs": ["libs/views/dogs/src/index.ts"],
+      "@rosecreek/inquiries": ["libs/views/inquiries/src/index.ts"],
+      "@rosecreek/litters": ["libs/views/litters/src/index.ts"],
       "@rosecreek/ui": ["libs/shared/ui/src/index.ts"],
-      "@rosecreek/updates": ["libs/pages/updates/src/index.ts"]
+      "@rosecreek/updates": ["libs/views/updates/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

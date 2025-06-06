@@ -1,0 +1,29 @@
+<lib-header></lib-header>
+<div class="page-section">
+  <h1>Our Golden Retrievers</h1>
+  <!-- <div *ngIf="isLoggedIn" class="admin-note">
+    <p>You are logged in as an admin. Navigate to the <a routerLink="/admin/dogs">Admin Dogs page</a> to manage entries.</p>
+  </div> -->
+  <div class="dog-list">
+    <div *ngFor="let dog of dogs" class="dog-card">
+      <h2>{{ dog.name }}</h2>
+      <div class="dog-photos">
+        <img *ngFor="let photo of dog.photos" [src]="photo" alt="{{ dog.name }}" class="dog-photo-thumbnail">
+      </div>
+      <p><strong>Gender:</strong> {{ dog.gender }}</p>
+      <p><strong>Birth Date:</strong> {{ dog.birthDate | date }}</p>
+      <p><strong>Pedigree:</strong> {{ dog.pedigree }}</p>
+      <p><strong>Titles:</strong> {{ dog.titles }}</p>
+      <p><strong>Description:</strong> {{ dog.description }}</p>
+      <p *ngIf="dog.healthClearances && dog.healthClearances.length > 0">
+        <strong>Health Clearances:</strong>
+        <span *ngFor="let clearance of dog.healthClearances">
+          <a [href]="clearance" target="_blank">View Document</a>
+        </span>
+      </p>
+      <p *ngIf="dog.damId"><strong>Dam ID:</strong> {{ dog.damId }}</p>
+      <p *ngIf="dog.sireId"><strong>Sire ID:</strong> {{ dog.sireId }}</p>
+    </div>
+    <p *ngIf="dogs.length === 0">No dogs found. Please add some from the Admin panel!</p>
+  </div>
+</div>
