@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Dog } from '@rosecreek/models/dog'; // Adjust the import path as necessary
+import { Dog } from '@rosecreek/models/dog';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '@rosecreek/ui'; // Adjust the import path as necessary
+import { HeaderComponent } from '@rosecreek/ui';
+import { DogService } from '@rosecreek/dog-service';
 
 @Component({
   selector: 'lib-dogs',
@@ -12,20 +13,24 @@ import { HeaderComponent } from '@rosecreek/ui'; // Adjust the import path as ne
 export class DogsComponent implements OnInit {
   dogs: Dog[] = [];
 
+  constructor(private dogService: DogService) {}
+
   ngOnInit(): void {
     this.loadDogs();
   }
 
   loadDogs(): void {
     // Simulate an API call to fetch dogs
-    this.dogs = [
-      {
-        id: 1,
-        name: 'Caymus',
-        birthDate: new Date(Date.UTC(2025, 0, 17, 12)),
-        gender: 'Male',
-        breed: 'Golden Retriever',
+    this.dogService.getDogs().subscribe({
+      next: (data: Dog[]) => {
+        this.dogs = data;
       },
-    ] satisfies Dog[];
+      error: (error: unknown) => {
+        console.error('Error fetching dogs:', error);
+      },
+      complete: () => {
+        console.log('Dogs loaded successfully');
+      },
+    });
   }
 }

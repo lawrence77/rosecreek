@@ -16,10 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@rosecreek/about-us": ["libs/views/about-us/src/index.ts"],
-      "@rosecreek/models/dog": ["libs/models/dog/src/index.ts"],
+      "@rosecreek/dog-service": ["libs/services/dog/src/index.ts"],
       "@rosecreek/dogs": ["libs/views/dogs/src/index.ts"],
       "@rosecreek/inquiries": ["libs/views/inquiries/src/index.ts"],
       "@rosecreek/litters": ["libs/views/litters/src/index.ts"],
+      "@rosecreek/models/dog": ["libs/models/dog/src/index.ts"],
       "@rosecreek/ui": ["libs/shared/ui/src/index.ts"],
       "@rosecreek/updates": ["libs/views/updates/src/index.ts"]
     }
