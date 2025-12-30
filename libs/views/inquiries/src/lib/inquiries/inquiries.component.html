@@ -1,2 +1,77 @@
 <lib-header></lib-header>
-<p>Inquiries works!</p>
+
+<div class="container">
+  <h1>Puppy Application Questionnaire</h1>
+  <p class="intro">
+    Thank you for your interest in one of our Golden Retriever puppies!
+    Please fill out this detailed questionnaire so we can learn more about you and your home.
+  </p>
+
+  <form [formGroup]="inquiryForm" (ngSubmit)="onSubmit()" novalidate>
+    <ng-container *ngFor="let category of questionnaire">
+      <div class="section">
+        <h2>{{ category.title }}</h2>
+
+        <div class="questions">
+          <ng-container *ngFor="let question of category.questions">
+            <div class="question" [class.boolean]="question.responseType === 'boolean'">
+              <label [for]="question.alias">
+                {{ question.question }}
+                <span class="required" *ngIf="inquiryForm.get(question.alias)?.hasError('required') && inquiryForm.get(question.alias)?.touched">
+                  *
+                </span>
+              </label>
+
+              <ng-container [ngSwitch]="question.responseType">
+                <!-- Boolean: Checkbox -->
+                <input
+                  *ngSwitchCase="'boolean'"
+                  type="checkbox"
+                  [id]="question.alias"
+                  [formControlName]="question.alias"
+                />
+
+                <!-- String: Textarea for longer answers, input for short -->
+                <ng-container *ngSwitchCase="'string'">
+                  <textarea
+                    *ngIf="question.alias !== 'name' && question.alias !== 'email' && question.alias !== 'phone' && question.alias !== 'gender' && question.alias !== 'homeOwnership' && question.alias !== 'marketing'"
+                    [id]="question.alias"
+                    [formControlName]="question.alias"
+                    rows="4"
+                  ></textarea>
+
+                  <input
+                    *ngIf="question.alias === 'name' || question.alias === 'email' || question.alias === 'phone' || question.alias === 'gender' || question.alias === 'homeOwnership' || question.alias === 'marketing'"
+                    type="{{ question.alias === 'email' ? 'email' : 'text' }}"
+                    [id]="question.alias"
+                    [formControlName]="question.alias"
+                  />
+                </ng-container>
+              </ng-container>
+
+              <!-- Error message -->
+              <div class="error" *ngIf="inquiryForm.get(question.alias)?.invalid && inquiryForm.get(question.alias)?.touched">
+                <span *ngIf="inquiryForm.get(question.alias)?.hasError('required')">
+                  This field is required.
+                </span>
+                <span *ngIf="inquiryForm.get(question.alias)?.hasError('email')">
+                  Please enter a valid email address.
+                </span>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="submit-section">
+      <button type="submit" [disabled]="isSubmitting || inquiryForm.invalid">
+        {{ isSubmitting ? 'Submitting...' : 'Submit Application' }}
+      </button>
+    </div>
+
+    <p class="submission-message" [class.success]="submissionMessage && !submissionMessage.includes('error')" [class.error]="submissionMessage && submissionMessage.includes('error')">
+      {{ submissionMessage }}
+    </p>
+  </form>
+</div>
