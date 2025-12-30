@@ -4,6 +4,7 @@ import { HeaderComponent } from '@rosecreek/ui';
 
 @Component({
   selector: 'lib-status',
+  standalone: true,
   imports: [CommonModule, HeaderComponent],
   templateUrl: './status.component.html',
   styleUrl: './status.component.css',

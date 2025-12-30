@@ -1,0 +1,108 @@
+.carousel-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px; /* Ensure consistent height */
+}
+
+.carousel-item {
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.5s ease-in-out;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.note {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.feedback-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #007bff;
+}
+
+.feedback-text {
+  font-style: italic;
+  margin: 10px 0;
+  max-width: 80%;
+}
+
+.feedback-author {
+  font-weight: bold;
+  color: #555;
+}
+
+.links-section ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.links-section li {
+  margin-bottom: 10px;
+}
+
+.links-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.links-section a:hover {
+  text-decoration: underline;
+}
