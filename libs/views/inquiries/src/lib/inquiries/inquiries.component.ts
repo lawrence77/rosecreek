@@ -8,7 +8,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { SubmitInquiryService } from '@rosecreek/submit-inquiry';
-import { Questionnaire } from '@rosecreek/submit-inquiry'; // Adjust path if needed, e.g. '../path/to/questionnaire'
+import { Questionnaire } from '@rosecreek/submit-inquiry';
 
 @Component({
   selector: 'lib-inquiries',
